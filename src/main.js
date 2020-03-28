@@ -15,10 +15,12 @@ import ZuKeAuthTemplate from './components/template/ZuKeAuthTemplate';
 import FangDongTemplate from './components/template/FangDongTemplate';
 import ZuKeContact from './components/contact/ZuKeContact';
 import FangDongContact from './components/contact/FangDongContact';
+import VueScroller from 'vue-scroller';
 
 Vue.use(ElementUI);
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueScroller);
 
 //2.定义路由
 const routes = [
