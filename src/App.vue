@@ -16,6 +16,7 @@
                 <el-menu-item @click="handleSubmenuSelection($event)"  index="/contact-fangdong">房东集体诉讼代表</el-menu-item>
                 <el-menu-item @click="handleSubmenuSelection($event)"  index="/template-fangdong">房东授权协议书模板</el-menu-item>
             </el-submenu>
+            <el-menu-item index="/about">关于站长</el-menu-item>
         </el-menu>
         <div class="line"></div>
         <router-view></router-view>

@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <h3>关于我</h3>
+        <h3>房东集体诉讼代表</h3>
         <p>我在<span class="important">xxxx</span>群里的昵称是<span class="important">xxxx</span> <br/>
         <p>姓名：<span class="important">xxxx</span></p>
         <p>现居地址：<span class="important">xxxx</span></p>

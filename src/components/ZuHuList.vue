@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-loading="loading">
         <!--<scroller :on-infinite="infinite" ref="myscroller">-->
             <span class="listHeader">共有{{data.totalSize}}人完成登记，{{data.publicList.length}}人选择公开信息</span>
             <div class="line"></div>
