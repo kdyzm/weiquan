@@ -11,7 +11,7 @@
                 <el-input placeholder="拉群集体维权" v-model="form.wechat"></el-input>
             </el-form-item>
             <el-form-item label="公开信息">
-                <el-radio-group v-model="form.public">
+                <el-radio-group v-model="form.publik">
                     <el-radio :label="1">是</el-radio>
                     <el-radio :label="0">否</el-radio>
                 </el-radio-group>
@@ -47,8 +47,9 @@
                     name: '',
                     mobile: '',
                     wechat: '',
-                    public: 0,
-                    comment: ''
+                    publik: 0,
+                    comment: '',
+                    type: 'FD'
                 },
                 loading: false,
                 dialogVisible: false,
@@ -59,7 +60,7 @@
             onSubmit() {
                 this.loading = true;
                 console.log(this.form);
-                var url = "http://rap2.taobao.org:38080/app/mock/246551/weiquan/zk/add";
+                var url = "http://localhost:8000/weiquan/add-one";
                 this.$http.post(url, this.form).then((res) => {
                     var data=res.body;
                     this.dialogVisible = true;
@@ -68,8 +69,9 @@
                             name: '',
                             mobile: '',
                             wechat: '',
-                            public: 0,
-                            comment: ''
+                            publik: 0,
+                            comment: '',
+                            type: 'FD'
                         }
                         this.msg='您已经成功登记';
                     }else{
@@ -86,7 +88,7 @@
                     name: '',
                     mobile: '',
                     wechat: '',
-                    public: 0,
+                    publik: 0,
                     comment: ''
                 }
             }

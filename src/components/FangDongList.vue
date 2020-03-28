@@ -53,64 +53,23 @@
                 dialogVisible:false,
                 loading: true,
                 msg: '',
-                data: {
-                    totalSize: 10,
+                data:{
+                    totalSize: 0,
                     publicList: [
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        },
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        },
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        },
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        },
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        },
-                        {
-                            name: '张三',
-                            mobile: '13213',
-                            wechat: '464564',
-                            public: 1,
-                            comment: '131313'
-                        }
                     ]
                 }
             }
         },
         mounted() {
             this.loading = true;
-            var url = "http://rap2.taobao.org:38080/app/mock/246551/weiquan/zk/add";
+            var url = "http://localhost:8000/weiquan/list-all?type=FD";
             this.$http.get(url).then((res) => {
+                    this.loading = false;
+
                     if(res && res.body.status === 0){
-                        this.data = res.body;
+                        this.data = res.body.data;
                         return;
                     }
-                    this.loading = false;
                     this.dialogVisible = true;
                     this.msg='请求数据失败 ';
                 },
