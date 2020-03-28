@@ -1,6 +1,10 @@
 <template>
     <div>
+        <span class="listHeader">共有{{data.totalSize}}人完成登记，{{data.publicList.length}}人选择公开信息</span>
+        <div class="line"></div>
         <el-table
+            :stripe="stripe"
+            :border="border"
             :data="data.publicList"
             style="width: 100%">
             <el-table-column
@@ -44,6 +48,8 @@
         name: "ZuHuList",
         data() {
             return {
+                border: false,
+                stripe:false,
                 dialogVisible:false,
                 loading: true,
                 msg: '',
@@ -100,8 +106,13 @@
             this.loading = true;
             var url = "http://rap2.taobao.org:38080/app/mock/246551/weiquan/zk/add";
             this.$http.get(url).then((res) => {
-                    var data = res.body;
+                    if(res && res.body.status === 0){
+                        this.data = res.body;
+                        return;
+                    }
                     this.loading = false;
+                    this.dialogVisible = true;
+                    this.msg='请求数据失败 ';
                 },
                 (err) => {
                     console.log(err);
@@ -114,5 +125,13 @@
 </script>
 
 <style scoped>
-
+    .listHeader{
+        font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+        font-size: 0.9rem;
+        line-height: 2rem;
+        color: #606266;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+    }
 </style>

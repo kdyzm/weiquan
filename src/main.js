@@ -10,6 +10,11 @@ import Home from './components/Home';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueResource from 'vue-resource';
+import Template from './components/template/Template';
+import ZuKeAuthTemplate from './components/template/ZuKeAuthTemplate';
+import FangDongTemplate from './components/template/FangDongTemplate';
+import ZuKeContact from './components/contact/ZuKeContact';
+import FangDongContact from './components/contact/FangDongContact';
 
 Vue.use(ElementUI);
 Vue.use(VueRouter);
@@ -22,6 +27,11 @@ const routes = [
   { path: '/zu-ke-add', component: ZuHuAdd },
   { path: '/zu-ke-list', component: ZuHuList },
   { path: '/home', component: Home },
+  { path: '/template', component: Template },
+  { path: '/template-fangdong', component: FangDongTemplate },
+  { path: '/template-zuke', component: ZuKeAuthTemplate },
+  { path: '/contact-zuke', component: ZuKeContact },
+  { path: '/contact-fangdong', component: FangDongContact },
   { path: '*', redirect: '/home' }
 ]
 
