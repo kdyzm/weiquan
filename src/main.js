@@ -15,6 +15,7 @@ import ZuKeAuthTemplate from './components/template/ZuKeAuthTemplate';
 import FangDongTemplate from './components/template/FangDongTemplate';
 import ZuKeContact from './components/contact/ZuKeContact';
 import FangDongContact from './components/contact/FangDongContact';
+import About from './components/About';
 import VueScroller from 'vue-scroller';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
@@ -37,6 +38,7 @@ const routes = [
   { path: '/template-zuke', component: ZuKeAuthTemplate },
   { path: '/contact-zuke', component: ZuKeContact },
   { path: '/contact-fangdong', component: FangDongContact },
+  { path: '/about', component: About },
   { path: '*', redirect: '/home' }
 ]
 

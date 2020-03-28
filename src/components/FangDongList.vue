@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-loading="loading">
         <span class="listHeader">共有{{data.totalSize}}人完成登记，{{data.publicList.length}}人选择公开信息</span>
         <div class="line"></div>
         <el-table
@@ -65,7 +65,6 @@
             var url = "http://qk-ss.kdyzm.cn:8000/weiquan/list-all?type=FD";
             this.$http.get(url).then((res) => {
                     this.loading = false;
-
                     if(res && res.body.status === 0){
                         this.data = res.body.data;
                         return;
