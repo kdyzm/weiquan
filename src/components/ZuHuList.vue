@@ -67,7 +67,7 @@
             },
             refresh(){
                 this.loading = true;
-                var url = "http://localhost:8000/weiquan/list-all?type=ZK";
+                var url = "http://qk-ss.kdyzm.cn:8000/weiquan/list-all?type=ZK";
                 this.$http.get(url).then((res) => {
                         this.loading = false;
                         if (res && res.body.status === 0) {

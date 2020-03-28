@@ -62,7 +62,7 @@
         },
         mounted() {
             this.loading = true;
-            var url = "http://localhost:8000/weiquan/list-all?type=FD";
+            var url = "http://qk-ss.kdyzm.cn:8000/weiquan/list-all?type=FD";
             this.$http.get(url).then((res) => {
                     this.loading = false;
 

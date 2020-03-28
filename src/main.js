@@ -16,11 +16,14 @@ import FangDongTemplate from './components/template/FangDongTemplate';
 import ZuKeContact from './components/contact/ZuKeContact';
 import FangDongContact from './components/contact/FangDongContact';
 import VueScroller from 'vue-scroller';
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css'
 
 Vue.use(ElementUI);
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VueScroller);
+Vue.use(Mint);
 
 //2.定义路由
 const routes = [

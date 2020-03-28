@@ -60,7 +60,7 @@
             onSubmit() {
                 this.loading = true;
                 console.log(this.form);
-                var url = "http://localhost:8000/weiquan/add-one";
+                var url = "http://qk-ss.kdyzm.cn:8000/weiquan/add-one";
                 this.$http.post(url, this.form).then((res) => {
                     var data=res.body;
                     this.dialogVisible = true;
