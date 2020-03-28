@@ -8,7 +8,7 @@
         <p>电话号：<span class="important">xxxx</span></p>
         <p>邮箱：<span class="important">xxxx</span></p>
         <br/>
-        <p><strong>如果想打官司的<span class="important">租客</span>觉得单独打官司太麻烦，可以授权我作为代表人发起集体诉讼，只需要提供集体诉讼的材料邮寄到以下地址即可：<br/></strong></p>
+        <p><strong>如果想打官司的<span class="important">房东</span>觉得单独打官司太麻烦，可以授权我作为代表人发起集体诉讼，只需要提供集体诉讼的材料邮寄到以下地址即可：<br/></strong></p>
         <br/>
         <strong>
             <p>地址：<span class="important">xxxxx</span></p>
